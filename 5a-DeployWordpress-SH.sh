@@ -16,7 +16,7 @@ sudo systemctl enable docker
 echo Adding user opc to docker group
 sudo usermod -a -G docker opc
 
-echo Configuring firewall for VNC
+echo Configuring firewall for inbound web access
 sudo firewall-cmd --zone=public --permanent --add-port=8080/tcp
 sudo firewall-cmd --zone=public --permanent --add-port=80/tcp
 sudo firewall-cmd --zone=public --permanent --add-masquerade
